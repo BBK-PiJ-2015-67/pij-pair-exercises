@@ -20,6 +20,10 @@ public class Patient {
         }
     }
 
+    public Patient getNextPatient (Patient patient) {
+        return this.nextPatient;
+    }
+
     public boolean deletePatient (Patient patient) {
         // if there's no next patient, we can't delete
         if (this.nextPatient == null) {
