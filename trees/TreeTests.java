@@ -16,5 +16,7 @@ public class TreeTests {
         System.out.println("getMax() should return 22... " + start.getMax());
         System.out.println("getMin() should return 1... " + start.getMin());
         System.out.println(start.toString());
+
+        System.out.println("depth() should correctly calculate depth of tree... " + ((start.depth() == 4) ? "passed" : "failed"));
     }
 }

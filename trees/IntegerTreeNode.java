@@ -60,11 +60,29 @@ public class IntegerTreeNode {
     public String toString(){
 
         String return_val = "[" + this.value;
-
         return_val += this.left == null ? " L[] " : " L[ " + this.left.toString() + " ]";
         return_val += this.right == null ? " R[] " : " R[ " + this.right.toString()  + " ]";
         return_val += "]";
 
         return return_val;
+    }
+
+    public int depth () {
+        int result = 0;
+        int resultLeft = 0;
+        int resultRight = 0;
+
+        if (this.left != null) {
+            resultLeft += 1 + this.left.depth();
+        }
+        if (this.right != null) {
+            resultRight += 1 + this.right.depth();
+        }
+
+        if (resultLeft == 0 && resultRight == 0) {
+            return result;
+        } else {
+            return (resultLeft > resultRight) ? resultLeft : resultRight;
+        }
     }
 }
