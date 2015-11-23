@@ -5,6 +5,8 @@ public class IntegerTreeNode {
 
     public IntegerTreeNode (int n) {
         this.value = n;
+        this.left = null;
+        this.right = null;
     }
 
     public void add (int newNumber) {
